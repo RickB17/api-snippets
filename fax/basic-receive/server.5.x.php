@@ -13,7 +13,6 @@ class FaxController extends Controller {
     // Define a handler for when the fax is initially sent
     public function sent()
     {
-
         $twimlResponse = new SimpleXMLElement("<Response></Response>");
         $recieveEl = $twimlResponse->addChild('Receive');
         $receiveEl->addAttribute('action', '/fax/received');
